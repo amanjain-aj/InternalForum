@@ -60,7 +60,7 @@ const AskQuestionPage = () => {
     if (!isValid) {
       console.log(formData, errorData);
     }
-    if (splitTags === "") {
+    if (splitTags !== "") {
       try {
         await axios.post(
           "https://internalforum.herokuapp.com/api/post/question",
