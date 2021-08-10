@@ -13,7 +13,7 @@ const UserDetailsPage = () => {
     const getaskQuestions = async () => {
       let token = window.localStorage.getItem("userdata").split(" ")[2];
       const res = await axios.get(
-        `http://localhost:5000/api/get/users/askquestion/${id}`,
+        `https://internalforum.herokuapp.com/api/get/users/askquestion/${id}`,
         {
           headers: {
             authorization: `bearer ${token}`,

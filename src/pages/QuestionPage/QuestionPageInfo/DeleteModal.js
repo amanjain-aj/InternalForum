@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 
 const DeleteModal = ({ setIsSure, show, handleDeletebtn }) => {
-  const [accept] = useState(true);
+  const [accept,setAccept] = useState(true);
   const handleClose = () => setIsSure(false);
   const deleteBtn = () => {
     if (accept) {

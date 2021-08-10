@@ -7,7 +7,7 @@ const AnswerDeleteModal = ({
   handleAnswerDelete,
   answerId,
 }) => {
-  const [agree] = useState(true);
+  const [agree,setAgree] = useState(true);
   const handleClose = () => setIsConfirm(false);
   const deleteAnswer = () => {
     if (agree) {

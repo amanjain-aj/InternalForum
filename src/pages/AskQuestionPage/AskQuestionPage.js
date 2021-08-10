@@ -63,7 +63,7 @@ const AskQuestionPage = () => {
     if (splitTags === "") {
       try {
         await axios.post(
-          "http://localhost:5000/api/post/question",
+          "https://internalforum.herokuapp.com/api/post/question",
           {
             userID: userData[0],
             userName: userData[1],

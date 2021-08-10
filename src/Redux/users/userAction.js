@@ -30,7 +30,7 @@ export const FetchUser = () => {
     dispatch(fetchUserRequest());
     let token = window.localStorage.getItem("userdata").split(" ")[2];
     try {
-      const response = await axios.get("http://localhost:5000/api/get/users", {
+      const response = await axios.get("https://internalforum.herokuapp.com/api/get/users", {
         headers: {
           authorization: `bearer ${token}`,
         },

@@ -32,7 +32,7 @@ const QuestionPageInfo = ({ Questionreducer, FetchQuestion }) => {
     FetchQuestion();
     const getQuestionInfo = async () => {
       let Questiondata = await axios.get(
-        `http://localhost:5000/api/get/allposts/questionId/${id}`
+        `https://internalforum.herokuapp.com/api/get/allposts/questionId/${id}`
       );
       setuserID(Questiondata.data[0].userID);
       setsolved(Questiondata.data[0].isSolved);
@@ -56,7 +56,7 @@ const QuestionPageInfo = ({ Questionreducer, FetchQuestion }) => {
       console.log(bodyError);
     }
     try {
-      await axios.post(`http://localhost:5000/api/post/answer/${id}`, {
+      await axios.post(`https://internalforum.herokuapp.com/api/post/answer/${id}`, {
         answeredUserID: userData[0],
         answeredUserName: userData[1],
         answer,
@@ -95,7 +95,7 @@ const QuestionPageInfo = ({ Questionreducer, FetchQuestion }) => {
   const handleDeletebtn = async () => {
     if (isSure) {
       try {
-        await axios.delete(`http://localhost:5000/api/delete/${id}`);
+        await axios.delete(`https://internalforum.herokuapp.com/api/delete/${id}`);
         history.push("/questions");
         toast.success("Question Deleted", {
           position: "top-center",
@@ -138,7 +138,7 @@ const QuestionPageInfo = ({ Questionreducer, FetchQuestion }) => {
     if (isConfirm) {
       try {
         await axios.delete(
-          `http://localhost:5000/api/question/${id}/delete/${answerId}`,
+          `https://internalforum.herokuapp.com/api/question/${id}/delete/${answerId}`,
           config
         );
         FetchQuestion();
@@ -164,11 +164,11 @@ const QuestionPageInfo = ({ Questionreducer, FetchQuestion }) => {
   const handleSolvedAndUnsolved = async (status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/question/status/${id}/${status}`
+        `https://internalforum.herokuapp.com/api/question/status/${id}/${status}`
       );
 
       let data = await axios.get(
-        `http://localhost:5000/api/get/allposts/questionId/${id}`
+        `https://internalforum.herokuapp.com/api/get/allposts/questionId/${id}`
       );
       setsolved(data.data[0].isSolved);
 

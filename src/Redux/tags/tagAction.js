@@ -31,7 +31,7 @@ export const FetchTag = (fetchSearch) => {
     let token = window.localStorage.getItem("userdata").split(" ")[2];
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/get/questions/${fetchSearch}`,
+        `https://internalforum.herokuapp.com/api/get/questions/${fetchSearch}`,
         {
           headers: {
             authorization: `bearer ${token}`,

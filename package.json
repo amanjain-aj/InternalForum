@@ -1,5 +1,5 @@
 {
-  "name": "stackoverflow",
+  "name": "internalforum",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,7 +40,7 @@
       "not dead",
       "not op_mini all"
     ],
-    "proxy": "http://localhost:5000",
+    "proxy": "https://internalforum.herokuapp.com/",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
