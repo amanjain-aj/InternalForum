@@ -1,0 +1,115 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 0 0;
+}
+
+.form .login_submit_button {
+  background: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 130px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.form .login_submit_button:hover {
+  background-color: #0069d9;
+  transition: 0.4s;
+}
+
+.input_field {
+  min-width: 320px;
+  width: 100%;
+}
+
+.input_field .input {
+  width: 100%;
+  border: none;
+  display: inline-block;
+  outline: none;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 13px 20px;
+}
+
+.input_field .input::placeholder {
+  color: gray;
+}
+
+.input_field:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.forgot_password {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 320px;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal_content {
+  max-width: 500px;
+  width: 100%;
+}
+
+.modal_header {
+  border-bottom: none !important;
+}
+
+.modal_title {
+  font-size: 18px !important;
+}
+
+.message {
+  padding: 12px 20px;
+  width: 100%;
+  color: #fff;
+  background-color: #48a7ff;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.modal_body .input {
+  background: transparent;
+  border-color: #686868;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  color: #565656;
+  padding: 8px 12px;
+  height: 40px !important;
+  background-color: #fff;
+  box-shadow: none;
+  outline: 0px;
+}
+
+.submit_button {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  max-width: 110px;
+  width: 100%;
+  padding: 8px 18px;
+  margin: 25px auto;
+  border-radius: 5px;
+}
+
+.submit_button:hover {
+  box-shadow: 0 2px 2px 0 rgb(113 192 22 / 14%),
+    0 3px 1px -2px rgb(113 192 22 / 20%), 0 1px 5px 0 rgb(113 192 22 / 12%);
+}
+
+.error {
+  color: red;
+  padding-left: 5px;
+}

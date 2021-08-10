@@ -1,0 +1,7 @@
+.LandingPage_container {
+  width: 1240px;
+  margin: auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 0.6fr 4fr;
+}

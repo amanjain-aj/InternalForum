@@ -1,0 +1,13 @@
+.Page_container {
+  width: 1240px;
+  margin: auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 0.6fr 4fr;
+}
+
+@media (max-width: 400px) {
+  .Page_container {
+    grid-template-columns: 1fr;
+  }
+}
